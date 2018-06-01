@@ -1,0 +1,320 @@
+/*   
+ ==========================================================================
+ 
+                Modified Date:   2018-04-28
+                category      -webkit-/-moz-/-ms-/-o-
+                display: -moz-box;        Firefox 
+                display: -ms-flexbox;     IE10  
+                display: -webkit-box;     Safari   
+                display: -webkit-flex;    Chrome, WebKit 
+                display: flex;            opera,chrome 
+ ==========================================================================   
+*/
+
+
+//
+// flex
+// --------------------------------------------------
+@mixin displayFlex{
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+//
+//box-flex
+// --------------------------------------------------
+@mixin displayFlexwebkitFlex($num) {
+    -webkit-flex: $num;
+    -webkit-box-flex: $num;
+				flex: $num;
+}
+
+//
+// justify-content：flex-end
+// --------------------------------------------------
+@mixin justifyContentFlexEnd {
+	-webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+       -ms-flex-pack: end;
+            justify-content: flex-end;
+}
+
+//
+// justify-content：flex-start
+// --------------------------------------------------
+@mixin justifyContentFlexstart {
+    -webkit-justify-content: flex-start;
+    -webkit-box-pack:start;
+       -ms-flex-pack:start;
+            justify-content: flex-start;
+}
+
+//
+// justify-content：space-between
+// --------------------------------------------------
+@mixin justifyContentSpaceBet {
+    -webkit-justify-content: space-between;
+    -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+//
+// justify-content:center
+// --------------------------------------------------
+@mixin justifyContentCenter {
+    -webkit-box-pack:center;
+    -webkit-justify-content:center;
+       -ms-flex-pack:center;
+            justify-content: center;
+}
+
+//
+// align-items
+// --------------------------------------------------
+@mixin alignItems($fx...) {
+    -webkit-align-items: $fx;
+      -webkit-box-align: $fx;
+         -ms-flex-align: $fx;
+            align-items: $fx;
+}
+
+//
+// flex-direction:column
+// --------------------------------------------------
+@mixin flexDirectionColumn {
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+//
+// flex-direction:row
+// --------------------------------------------------
+@mixin flexDirectionRow {
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+
+//
+// flex-wrap
+// --------------------------------------------------
+@mixin flexWrap($wrap) {
+    -webkit-flex-wrap: $wrap;
+            flex-wrap: $wrap;
+}
+
+//
+// background-size
+// --------------------------------------------------
+@mixin backgroundSize($f...) {
+	-moz-background-size: $f;
+	     background-size: $f;
+}
+
+//
+// linear-gradient
+// --------------------------------------------------
+// @mixin linearGradient($args...) {
+// 	-webkit-linear-gradient($args);
+//         -moz-liner-gradient($args);
+//         -ms-linear-gradient($args);
+//          -o-linear-gradient($args);
+//             linear-gradient($args);
+// }
+
+//
+// box-shadow
+// --------------------------------------------------
+@mixin boxShadow($args...) {
+    -webkit-box-shadow: $args;
+       -moz-box-shadow: $args;
+        -ms-box-shadow: $args;
+         -o-box-shadow: $args;
+            box-shadow: $args;
+}
+
+//
+// transform
+// --------------------------------------------------
+@mixin transform($args...) {
+    -webkit-transform: $args;
+       -moz-transform: $args;
+        -ms-transform: $args;
+         -o-transform: $args;
+            transform: $args;
+}
+
+//
+// transform-origin
+// --------------------------------------------------
+@mixin transformOrigin($args...) {
+    -webkit-transform-origin: $args;
+       -moz-transform-origin: $args;
+        -ms-transform-origin: $args;
+         -o-transform-origin: $args;
+            transform-origin: $args;
+}
+
+//
+// perspective-origin
+// --------------------------------------------------
+@mixin perspectiveOrigin($args...) {
+    -webkit-perspective-origin: $args;
+       -moz-perspective-origin: $args;
+        -ms-perspective-origin: $args;
+         -o-perspective-origin: $args;
+			perspective-origin: $args;
+}
+
+//
+// transition
+// --------------------------------------------------
+@mixin transition($args...) {
+    -webkit-transition: $args;
+       -moz-transition: $args;
+         -o-transition: $args;
+            transition: $args;
+}
+
+//
+// animation
+// --------------------------------------------------
+@mixin animation($args...) {
+    -webkit-animation: $args;
+            animation: $args;
+}
+
+//
+// keyframs
+// --------------------------------------------------
+// @mixin keyFrams($name,$args...) {
+//     -webkit-keyframes $name {
+//         from {$args},
+//         to {$args}
+//     }
+
+//     -moz-keyframes $name {
+//         from {$args},
+//         to {$args}
+//     }
+
+//     -o-keyframes $name {
+//         from {$args},
+//         to {$args}
+//     }
+
+//     keyframes $name {
+//         from {$args},
+//         to {$args}
+//     }
+// }
+
+//
+// border-box
+// --------------------------------------------------
+@mixin boxSizing($args...) {
+	-webkit-box-sizing: $args;
+	   -moz-box-sizing: $args;
+	    -ms-box-sizing: $args;
+	     -o-box-sizing: $args;
+	        box-sizing: $args;
+}
+
+//
+// border-radius
+// --------------------------------------------------
+@mixin borderRadius($args...) {
+	-webkit-border-radius: $args;
+	   -moz-border-radius: $args;
+	        border-radius: $args;
+}
+
+//
+// background-clip
+// --------------------------------------------------
+@mixin backgroundClip($args...) {
+    -webkit-background-clip: $args;
+       -moz-background-clip: $args;
+	        background-clip: $args;
+}
+
+//
+// user-select
+// --------------------------------------------------
+@mixin userSelect($args...){
+	-webkit-user-select: $args;
+	   -moz-user-select: $args;
+	        user-select: $args;
+}
+
+//
+// pointer-events
+// --------------------------------------------------
+@mixin pointerEvents($args...) {
+	-webkit-pointer-events: $args;
+	        pointer-events: $args;
+}
+
+//
+// text-overflow
+// --------------------------------------------------
+@mixin textOverflow($args...) {
+	-moz-text-overflow: $args;
+	  -o-text-overflow: $args;
+	     text-overflow: $args;
+}
+
+//
+// text-align-last
+// --------------------------------------------------
+@mixin textAlignLast($args...) {
+	-webkit-text-align-last: $args;
+	   -moz-text-align-last: $args;
+	        text-align-last: $args;
+}
+
+//
+// min-device-pixel-ratio(像素比)
+// --------------------------------------------------
+@mixin minDevicePixelRatio($args...) {
+	-webkit-min-device-pixel-ratio: $args;
+	   min--moz-device-pixel-ratio: $args;
+	     -o-min-device-pixel-ratio: $args;
+	        min-device-pixel-ratio: $args;
+
+}
+
+//
+// border-image
+// --------------------------------------------------
+@mixin borderImage($args...){
+    -webkit-border-image: $args; /* Safari 5 */
+         -o-border-image: $args; /* Opera */
+            border-image: $args;
+}
+
+//
+// box-direction
+// --------------------------------------------------
+@mixin boxDirectio($args...){
+    -webkit-box-direction: $args;
+       -moz-box-direction: $args;
+            box-direction: $args;
+}
+
+/*-------------------------------------
+├   ellipsis                          ┆
+└------------------------------------*/
+@mixin ellipsis {
+    white-space: nowrap; 
+    overflow:hidden;
+    -ms-text-overflow: ellipsis; 
+     -o-text-overflow: ellipsis;   
+        text-overflow: ellipsis; 
+}
