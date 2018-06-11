@@ -35,9 +35,10 @@ export default {
                 background:"url(" + require("assets/img/header-phoneicon.png") + ")",
                 backgroundRepeat: "no-repeat",
                 height: "19px",
-                width:"40px",
+                width:"35px",
                 backgroundPosition:" 12px -83px",
-                display: "inline-block"
+                display: "inline-block",
+                verticalAlign: "middle"
             }
         };
     },
@@ -84,7 +85,7 @@ export default {
             margin-left: 20px;
             .headSe{
                 position: absolute;
-                left: .2rem;
+                left: 20px;
                 top: 50%;
                 transform: translateY(-50%);
                 -webkit-transform: translateY(-50%);
@@ -125,9 +126,8 @@ export default {
         }
         .homeI8n{
             line-height: 88px;
-            padding: 12px 0;
+            
             .iconI8n{
-                
             }
         }
     }
