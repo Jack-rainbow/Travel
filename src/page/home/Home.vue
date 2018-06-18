@@ -5,6 +5,7 @@
         <Naver></Naver>
         <Address></Address>
         <Recommend></Recommend>
+        <move-like></move-like>
     </div>
 </template>
 
@@ -14,6 +15,7 @@ import Swiper from 'page/swiper/Swiper'
 import Naver from 'page/naver/Naver'
 import Address from 'page/address/Address'
 import Recommend from 'page/recommend/Recommend'
+import MoveLike from 'page/movelike/MoveLike'
 export default {
     name: "Home",
     data() {
@@ -28,7 +30,8 @@ export default {
         Swiper,
         Naver,
         Address,
-        Recommend
+        Recommend,
+        MoveLike
     }
 };
 </script>

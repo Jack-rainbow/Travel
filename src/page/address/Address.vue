@@ -5,7 +5,7 @@
                 <div @click="CitySelect">
                     <i class="el-icon-location-outline  mpIconfont"></i>
                     <!-- <Addpost @citysLect="citysLect"></Addpost> -->
-                    <span>{{ cityCont}}</span>
+                    <span>{{ this.$store.state.city }}</span>
                 </div>
             </li>
             <li>
@@ -27,11 +27,11 @@ export default {
      }
    },
    mounted(){
-        if(sessionStorage.getItem('test')== null){
-               this.cityCont="定位失败"
-            }else{
-                this.cityCont=sessionStorage.getItem('test')
-        }
+        // if(sessionStorage.getItem('test')== null){
+        //        this.cityCont="定位失败"
+        //     }else{
+        //         this.cityCont=sessionStorage.getItem('test')
+        // }
    },
    computed:{
     //    test(){

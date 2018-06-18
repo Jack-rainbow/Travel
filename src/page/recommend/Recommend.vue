@@ -8,7 +8,7 @@
             <div  class="redMoreBan">
                 <router-link to="moreRed">
                     <span class="redMoreCont">全部榜单</span>
-                    <i class="iconfont redMoreListTitIcon">&#xe625;</i>
+                    <i class="el-icon-arrow-right"></i>
                 </router-link>
             </div>
         </div>
@@ -117,7 +117,7 @@
                 overflow: hidden;
                 width: 30px;
                 height: 30px;
-                margin-left: 20px;
+                // margin-left: 20px;
                 vertical-align: top;
             }
             .redListTitIcon{

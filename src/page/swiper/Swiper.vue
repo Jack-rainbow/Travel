@@ -54,6 +54,7 @@ export default {
 @import "~common/css/compatibility";
 
 .wrapper{
+  margin-top:88px;
   padding-bottom:27%;
   height:0;
   width:100%;

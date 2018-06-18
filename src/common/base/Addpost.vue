@@ -14,7 +14,7 @@
                     我的位置
                 </div>
                 <div class="locationPic" >
-                    {{ locationMy }}
+                    {{ this.$store.state.city }}
                 </div>
             </div>
             <div v-for="(item,index) of city" :key="index">
@@ -44,28 +44,34 @@
 </template>
                            
 <script>
+
 import City from "../../../static/js/citySelect.js"
+
+import  { mapActions } from "vuex"
 export default {
     data() {
       return {
-          city:City,
-          locationMy:'定位失败'
+          city:City
       }
     },
     components:{
 
     },
     methods:{
-        IndexSuy(data){
-            console.log(data)
-        },
         locationMyJ(data){ 
-           sessionStorage.setItem('test',this.locationMy = data)
+            //也可以用this.$strore.commit
+            this.$store.dispatch('changeCity',data)
+
+
+        //    sessionStorage.setItem('test',this.locationMy = data)
             // this.$emit('citysLect',this.locationMy = data);
-            setTimeout(()=>{
-                this.$router.push({path:'/'})
-            },500)
-        }
+            // setTimeout(()=>{
+            //     this.$router.push({path:'/'})
+            // },500)
+        },
+        ...mapActions({
+            locationMyJ : 'changeCity'
+        })
     },
     mounted(){
 

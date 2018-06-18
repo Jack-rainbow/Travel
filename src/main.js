@@ -11,7 +11,8 @@ import i18n from '@/language/i18n'
 // px-rem
 import 'lib-flexible'
 
-
+import axios from 'axios'
+Vue.prototype.$http = axios
 
 import '@/common/css/reset.css'
 import 'element-ui/lib/theme-chalk/index.css'
@@ -19,6 +20,8 @@ import 'element-ui/lib/theme-chalk/index.css'
 import './common/css/iconfont.css'
 Vue.use(ElementUI)
 
+import Vuex from 'vuex'
+import store from './store'
 
 
 
@@ -33,6 +36,7 @@ new Vue({
   el: '#app',
   router,
   i18n,
+  store,
   components: { App },
   template: '<App/>'
 })

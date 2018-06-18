@@ -10,7 +10,15 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      // '/api':{
+      //     target: 'https://m.lvmama.com/h5/homepagePart.index?stationCode=HEB&page=1&pageSize=4&index=0&stationId=52&type=HOME&subType=TICKET&tagCodes=TICKET&firstChannel=TOUCH&secondChannel=LVMM',
+      //     changeOrigin: true, //改变源 
+      //     pathRewrite: { 
+      //       '^/api': 'https://m.lvmama.com/h5/homepagePart.index?stationCode=HEB&page=1&pageSize=4&index=0&stationId=52&type=HOME&subType=TICKET&tagCodes=TICKET&firstChannel=TOUCH&secondChannel=LVMM' //路径重写 
+      //     } 
+      // }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

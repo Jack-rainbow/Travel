@@ -13,7 +13,7 @@
         </div>
         <div class="headRight">
            <a href="" class="cityMore">
-                北京
+                {{ this.$store.state.city }}
                 <span class="city">
                     <i class="iconfont cityDownArrow">&#xe62d;</i>
                 </span>
@@ -23,6 +23,7 @@
            <a href="" class="iconI8n" :style="iconI8n">     
            </a>
         </div>
+       
     </header>
 </template>
 
@@ -58,9 +59,11 @@ export default {
     .head{
         background: $headBg;
         @include displayFlex;
-        position: relative;
+        position: fixed;
         width: 100%;
         height: 88px;
+        top:0;
+        z-index:99;
         text-align: center;
         color: #fff;
         .headLeft{
@@ -130,5 +133,6 @@ export default {
             .iconI8n{
             }
         }
+        
     }
 </style>

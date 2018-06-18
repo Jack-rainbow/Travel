@@ -1,15 +1,21 @@
 <template>
   <div id="app">
-    <router-view/>
+       <router-view/>
+      <homeBottom></homeBottom>
   </div>
 </template>
 
 <script>
+import homeBottom from 'page/homeBottom/homeBottom'
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+    homeBottom
+  }
 }
 </script>
 
-<style>
+
+<style lang="scss" scoped>
 
 </style>
