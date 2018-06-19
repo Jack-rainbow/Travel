@@ -59,24 +59,25 @@ export default {
     },
     methods:{
         locationMyJ(data){ 
-            //也可以用this.$strore.commit
+        // //     //也可以用this.$strore.commit
             this.$store.dispatch('changeCity',data)
+            this.$router.push({path:'/'})
 
-
-        //    sessionStorage.setItem('test',this.locationMy = data)
-            // this.$emit('citysLect',this.locationMy = data);
+        // // //    sessionStorage.setItem('test',this.locationMy = data)
+        // //     // this.$emit('citysLect',this.locationMy = data);
             // setTimeout(()=>{
             //     this.$router.push({path:'/'})
             // },500)
-        },
-        ...mapActions({
-            locationMyJ : 'changeCity'
-        })
+        }
+       
     },
     mounted(){
 
     },
     computed: {
+         ...mapActions([
+            'changeCity'
+        ])
     }
   };
 </script>

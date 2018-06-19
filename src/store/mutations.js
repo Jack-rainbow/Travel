@@ -2,9 +2,9 @@
 import * as types from './mutation-type'
 
 export const matutaions={
-    //dispatch的
-    [types.SET_CHANGECITY](state,changec){
-        state.changecity = changec;
+    //dispatch的0.
+    [types.SET_CHANGECITY](state,data){
+        state.city = data;
     },
     [types.SET_CITY](state,cityAddress){
         //state是状态值 state
